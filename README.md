@@ -169,12 +169,6 @@ To extend the platform:
 - Add corresponding BigQuery views
 - Update visualization pipeline
 
-## Documentation
-
-- Technical documentation: `data/processed/key_findings.md`
-- Setup guide: `dashboard_setup_guide.md`
-- GCP guide: `gcp_data_location_guide.md`
-- Interview prep: `interview_prep.md`
 
 ## Contributing
 
