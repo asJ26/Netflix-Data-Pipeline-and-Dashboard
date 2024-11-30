@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netflix Analytics Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #141414;
+            color: white;
+        }
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .title {
+            text-align: center;
+            color: #e50914;
+            margin-bottom: 30px;
+        }
+        .visualization-container {
+            margin-bottom: 30px;
+            background-color: #181818;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .visualization-title {
+            margin-bottom: 15px;
+            color: #e50914;
+            font-size: 1.5em;
+        }
+        .visualization-description {
+            color: #999;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+            background-color: #181818;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        iframe:hover {
+            box-shadow: 0 4px 8px rgba(229,9,20,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1 class="title">Netflix Streaming Analytics Dashboard</h1>
+        
+        <div class="visualization-container">
+            <h2 class="visualization-title">Streaming Quality Metrics</h2>
+            <p class="visualization-description">
+                Comprehensive analysis of streaming performance across different devices and connection types,
+                including buffering events, bandwidth usage, startup time, and audio quality metrics.
+            </p>
+            <iframe src="quality_metrics.html" height="1200px"></iframe>
+        </div>
+        
+        <div class="visualization-container">
+            <h2 class="visualization-title">User Engagement Analysis</h2>
+            <p class="visualization-description">
+                Deep dive into user engagement patterns, showing completion rates, watch duration,
+                and session distribution across different platforms and connection types.
+            </p>
+            <iframe src="engagement_metrics.html" height="800px"></iframe>
+        </div>
+        
+        <div class="visualization-container">
+            <h2 class="visualization-title">Content Ratings Analysis</h2>
+            <p class="visualization-description">
+                Detailed breakdown of content ratings distribution across genres and types,
+                featuring bubble charts showing content popularity and performance metrics.
+            </p>
+            <iframe src="ratings_analysis.html" height="1000px"></iframe>
+        </div>
+        
+        <div class="visualization-container">
+            <h2 class="visualization-title">Recommendation System Performance</h2>
+            <p class="visualization-description">
+                Analysis of recommendation algorithm effectiveness, showing performance metrics
+                across different categories and user engagement levels.
+            </p>
+            <iframe src="recommendation_effectiveness.html" height="1000px"></iframe>
+        </div>
+    </div>
+</body>
+</html>

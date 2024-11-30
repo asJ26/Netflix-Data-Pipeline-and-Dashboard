@@ -1,0 +1,64 @@
+{
+  "contents_schema": [
+    {"name": "content_id", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "type", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "title", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "genre", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "release_year", "field_type": "INTEGER", "mode": "REQUIRED"},
+    {"name": "duration_minutes", "field_type": "INTEGER", "mode": "REQUIRED"},
+    {"name": "language", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "rating", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "tags", "field_type": "STRING", "mode": "REPEATED"}
+  ],
+  "users_schema": [
+    {"name": "user_id", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "country", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "subscription_type", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "age_group", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "join_date", "field_type": "TIMESTAMP", "mode": "REQUIRED"},
+    {"name": "preferred_genres", "field_type": "STRING", "mode": "REPEATED"},
+    {"name": "preferred_languages", "field_type": "STRING", "mode": "REPEATED"},
+    {"name": "has_profile_pin", "field_type": "BOOLEAN", "mode": "REQUIRED"},
+    {"name": "max_stream_quality", "field_type": "STRING", "mode": "REQUIRED"}
+  ],
+  "viewing_events_schema": [
+    {"name": "event_id", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "timestamp", "field_type": "TIMESTAMP", "mode": "REQUIRED"},
+    {"name": "event_type", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "content_id", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "user_id", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "device_type", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "watch_duration_seconds", "field_type": "INTEGER", "mode": "REQUIRED"},
+    {"name": "session_id", "field_type": "STRING", "mode": "REQUIRED"},
+    {"name": "quality_metrics", "field_type": "RECORD", "mode": "REQUIRED", "fields": [
+      {"name": "buffering_events", "field_type": "INTEGER", "mode": "REQUIRED"},
+      {"name": "average_bitrate", "field_type": "INTEGER", "mode": "REQUIRED"},
+      {"name": "playback_quality", "field_type": "STRING", "mode": "REQUIRED"},
+      {"name": "connection_type", "field_type": "STRING", "mode": "REQUIRED"},
+      {"name": "bandwidth_mbps", "field_type": "FLOAT", "mode": "REQUIRED"},
+      {"name": "startup_time_seconds", "field_type": "FLOAT", "mode": "REQUIRED"},
+      {"name": "frames_dropped_ratio", "field_type": "FLOAT", "mode": "REQUIRED"},
+      {"name": "audio_quality_score", "field_type": "FLOAT", "mode": "REQUIRED"}
+    ]},
+    {"name": "user_interaction", "field_type": "RECORD", "mode": "REQUIRED", "fields": [
+      {"name": "rewind_count", "field_type": "INTEGER", "mode": "REQUIRED"},
+      {"name": "forward_count", "field_type": "INTEGER", "mode": "REQUIRED"},
+      {"name": "pause_count", "field_type": "INTEGER", "mode": "REQUIRED"},
+      {"name": "quality_changes", "field_type": "INTEGER", "mode": "REQUIRED"},
+      {"name": "subtitle_changes", "field_type": "INTEGER", "mode": "REQUIRED"},
+      {"name": "volume_changes", "field_type": "INTEGER", "mode": "REQUIRED"}
+    ]},
+    {"name": "recommendation_data", "field_type": "RECORD", "mode": "REQUIRED", "fields": [
+      {"name": "algorithm_type", "field_type": "STRING", "mode": "REQUIRED"},
+      {"name": "recommendation_score", "field_type": "FLOAT", "mode": "REQUIRED"},
+      {"name": "position_in_list", "field_type": "INTEGER", "mode": "REQUIRED"},
+      {"name": "recommendation_category", "field_type": "STRING", "mode": "REQUIRED"}
+    ]},
+    {"name": "engagement_signals", "field_type": "RECORD", "mode": "REQUIRED", "fields": [
+      {"name": "completion_rate", "field_type": "FLOAT", "mode": "REQUIRED"},
+      {"name": "engagement_score", "field_type": "FLOAT", "mode": "REQUIRED"},
+      {"name": "social_sharing", "field_type": "BOOLEAN", "mode": "REQUIRED"},
+      {"name": "rating_given", "field_type": "INTEGER", "mode": "NULLABLE"}
+    ]}
+  ]
+}
