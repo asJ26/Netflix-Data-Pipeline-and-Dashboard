@@ -23,9 +23,9 @@ def generate_realistic_sample_data():
                 "Italian", "Mandarin", "Portuguese", "Russian", "Arabic"]
     ratings = ["G", "PG", "PG-13", "R", "TV-MA", "TV-14", "TV-PG", "TV-Y7", "TV-Y"]
     
-    # Generate 50 diverse content items (increased from 20)
+    # Generate 200 diverse content items (increased from 50)
     contents_data = []
-    for i in range(50):
+    for i in range(200):
         genre = random.choice(genres)
         content_type = random.choice(["movie", "series"])
         duration = random.randint(25, 60) if content_type == "series" else random.randint(85, 180)
@@ -45,7 +45,7 @@ def generate_realistic_sample_data():
         }
         contents_data.append(content)
 
-    # Generate 1000 diverse users
+    # Generate 10000 diverse users (increased from 1000)
     countries = ["United States", "Canada", "United Kingdom", "France", "Germany", "Japan", 
                 "South Korea", "Australia", "Brazil", "India", "Mexico", "Spain", "Italy", 
                 "Netherlands", "Sweden", "Singapore", "UAE", "South Africa", "Argentina", "China"]
@@ -53,7 +53,7 @@ def generate_realistic_sample_data():
     subscription_types = ["basic", "standard", "premium", "student", "family"]
     
     users_data = []
-    for i in range(1000):
+    for i in range(10000):
         # Generate realistic user preferences
         country = random.choice(countries)
         age_group = random.choice(age_groups)
@@ -120,7 +120,7 @@ def generate_realistic_sample_data():
         }
         users_data.append(user)
 
-    # Generate 10000 viewing events (increased for larger user base)
+    # Generate 100000 viewing events (increased from 10000)
     device_types = ["smart_tv", "mobile", "tablet", "gaming_console", "desktop", "streaming_stick"]
     event_types = ["start", "pause", "resume", "complete", "exit", "seek_forward", "seek_backward"]
     connection_types = ["wifi", "ethernet", "4G", "5G", "3G"]
@@ -130,7 +130,7 @@ def generate_realistic_sample_data():
 
     viewing_events_data = []
     
-    for _ in range(10000):
+    for _ in range(100000):
         user = random.choice(users_data)
         
         # Select content based on user preferences

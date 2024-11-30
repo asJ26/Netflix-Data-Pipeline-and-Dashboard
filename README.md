@@ -2,6 +2,11 @@
 
 A comprehensive analytics platform for processing and visualizing streaming service data using Google Cloud Platform (BigQuery) and interactive visualizations.
 
+## Data Volume
+- 10,000 diverse users across 20 countries
+- 200 content items across 14 genres
+- 100,000 viewing events with detailed metrics
+
 ## Project Structure
 
 ```
@@ -31,6 +36,29 @@ A comprehensive analytics platform for processing and visualizing streaming serv
 - BigQuery integration for scalable data processing
 - Customizable visualization components
 - Comprehensive analytics views
+
+## Key Metrics
+
+### Content Distribution
+- 200 titles across 14 genres
+- Animation (23 titles)
+- Thriller (21 titles)
+- Crime (18 titles)
+- Average duration: 70-100 minutes
+
+### User Demographics
+- Standard plan: 38.88% (3,888 users)
+- Basic plan: 26.07% (2,607 users)
+- Premium plan: 18.32% (1,832 users)
+- Family plan: 8.88% (888 users)
+- Student plan: 7.85% (785 users)
+
+### Viewing Patterns
+- Smart TV: 22.07% (22,065 events)
+- Desktop: 19.42% (19,424 events)
+- Mobile: 17.01% (17,012 events)
+- Tablet: 16.88% (16,879 events)
+- Gaming/Streaming: ~24.6% (24,620 events)
 
 ## Prerequisites
 
@@ -146,6 +174,7 @@ To extend the platform:
 - Technical documentation: `data/processed/key_findings.md`
 - Setup guide: `dashboard_setup_guide.md`
 - GCP guide: `gcp_data_location_guide.md`
+- Interview prep: `interview_prep.md`
 
 ## Contributing
 
